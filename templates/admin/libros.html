@@ -1,0 +1,117 @@
+{%include 'admin/header.html'%}
+
+        
+        <main>
+            <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="card">
+                            <div class="card-header">Datos del libro:</div>
+                            <div class="card-body">
+
+                                <form action="/admin/libros/guardar" method="post" enctype="multipart/form-data">
+
+                                    <div class="mb-3">
+                                        <label for="txtNombre" class="form-label">Nombre:</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            name="txtNombre"
+                                            id="txtNombre"
+                                            aria-describedby="helpId"
+                                            placeholder="Escriba el nombre del libro"
+                                        />
+                                        <div class="mb-3">
+                                            <label for="txtImagen" class="form-label">Imagen:</label>
+                                            <input
+                                                type="file"
+                                                class="form-control"
+                                                name="txtImagen"
+                                                id="txtImagen"
+                                                aria-describedby="helpId"
+                                                placeholder="Seleccione una imagen"
+                                            />
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="txtUrl" class="form-label">URL Descarga:</label>
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                name="txtUrl"
+                                                id="txtUrl"
+                                                aria-describedby="helpId"
+                                                placeholder="Coloque la URL de descarga"
+                                            />
+                                        </div>
+                                        <button
+                                            type="submit"
+                                            class="btn btn-primary"
+                                        >
+                                            Agregar
+                                        </button>
+                                        <a
+                                            name=""
+                                            id=""
+                                            class="btn btn-danger"
+                                            href="#"
+                                            role="button"
+                                            >Cancelar</a
+                                        >
+                                        
+                                        
+                                    </div>
+                                    
+
+                                </form>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div
+                            class="table-responsive">
+                            <table
+                                class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Imagen</th>
+                                        <th scope="col">URL</th>
+                                        <th scope="col">Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="">
+                                        <td scope="row">1</td>
+                                        <td>Python</td>
+                                        <td>imagen.jpg</td>
+                                        <td>http://</td>
+                                        <td>
+                                        <a
+                                            name=""
+                                            id=""
+                                            class="btn btn-danger"
+                                            href="#"
+                                            role="button"
+                                            >Eliminar</a
+                                        >
+                                        
+                                        </td>
+                                    </tr>
+                                    
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>           
+
+        </main>
+        
+
+{%include 'admin/footer.html'%}
