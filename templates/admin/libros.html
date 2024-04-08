@@ -87,18 +87,25 @@
                                     <tr>
                                         <td>{{libro[0]}}</td>
                                         <td>{{libro[1]}}</td>
-                                        <td>{{libro[2]}}</td>
+                                        <td>
+                                            <img
+                                                width="60"
+                                                src="/imagenes/{{ libro[2] }}"
+                                                class="img-fluid rounded-top"
+                                                alt=""
+                                            />
+                                        </td>
                                         <td>{{libro[3]}}</td>
                                         <td>
-                                        <a
-                                            name=""
-                                            id=""
-                                            class="btn btn-danger"
-                                            href="#"
-                                            role="button"
-                                            >Eliminar</a
-                                        >
-                                        
+                                            <form action="/admin/libros/borrar" method="post">
+                                                <input value="{{libro[0]}}" type="text" name="txtID" id="txtID" hidden>
+                                                <button
+                                                    type="submit"
+                                                    class="btn btn-danger"
+                                                >
+                                                    Eliminar
+                                                </button>
+                                            </form>   
                                         </td>
                                     </tr>
                                     {% endfor %}
