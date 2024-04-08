@@ -83,11 +83,12 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="">
-                                        <td scope="row">1</td>
-                                        <td>Python</td>
-                                        <td>imagen.jpg</td>
-                                        <td>http://</td>
+                                    {% for libro in libros %}
+                                    <tr>
+                                        <td>{{libro[0]}}</td>
+                                        <td>{{libro[1]}}</td>
+                                        <td>{{libro[2]}}</td>
+                                        <td>{{libro[3]}}</td>
                                         <td>
                                         <a
                                             name=""
@@ -100,7 +101,7 @@
                                         
                                         </td>
                                     </tr>
-                                    
+                                    {% endfor %}
                                     
                                 </tbody>
                             </table>

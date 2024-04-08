@@ -35,7 +35,13 @@ def admin_login():
 
 @app.route('/admin/libros')
 def admin_libros():
-    return render_template('admin/libros.html')
+    conexion=mysql.connect()
+    cursor= conexion.cursor()
+    cursor.execute("SELECT * FROM `libros`")
+    libros=cursor.fetchall()
+    conexion.commit()
+    print(libros)
+    return render_template('admin/libros.html', libros=libros)
 
 @app.route('/admin/libros/guardar', methods=['POST'])
 def admin_libros_guardar():
